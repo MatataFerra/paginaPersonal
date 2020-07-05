@@ -1,0 +1,17 @@
+
+.publiMain{
+    
+
+    .publiSection{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            h1{
+                font-family: $font-family;
+                color: $color-texto;
+                font-size: 5rem;
+            }
+    }
+}

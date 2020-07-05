@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import "normalize";
+
+//Fin de la normalización
+
+.full-page {
+    position: relative;
+}
+
+//Variables
+
+$color-h1: #F7484E;
+$color-texto: #292929;
+$color-fondo: #292929;
+$color-fondo-2: #F7484E;
+$font-family: 'Lato', sans-serif;
+$white: white;
+
+
+//Mixin
+
+@mixin titulos {
+    color: $color-texto;
+    font-size: 38px;
+}
+
+@mixin tamaños($color-fondo-section) {
+    height: 100vh;
+    padding: 2rem;
+    background-color: $color-fondo-section;
+}
+
+//imports
+
+@import "hero";
+@import "animations";
+@import "main";
+@import"publicaciones";
+
