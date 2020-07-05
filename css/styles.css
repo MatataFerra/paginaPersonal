@@ -1117,6 +1117,79 @@ template {
   font-size: 1.1rem;
 }
 
+@media only screen and (max-width: 320px) {
+  .main-page {
+    display: block;
+    position: static;
+  }
+  .main-page .main-izq {
+    position: static;
+  }
+  .main-page .main-izq h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  .main-page .main-der {
+    padding: 0;
+  }
+  .main-page .main-der .textos-main {
+    margin: 2rem auto;
+  }
+  .main-page .main-der .textos-main-2 .cursiva {
+    font-size: 2rem;
+    line-height: 2rem;
+    -webkit-filter: none;
+            filter: none;
+  }
+  .main-page .main-der .lista-pasos {
+    width: 100%;
+  }
+  .main-page .main-der .lista-pasos .lista-elementos-1,
+  .main-page .main-der .lista-pasos .lista-elementos-3 {
+    background-color: rgba(45, 124, 143, 0.123);
+  }
+  .main-page .main-der .lista-pasos .lista-elementos-2,
+  .main-page .main-der .lista-pasos .lista-elementos-4 {
+    background-color: #dedede;
+  }
+  .main-page .main-der .lista-pasos > div {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  .main-page .main-der .lista-pasos > div > span {
+    font-size: 1.8rem;
+    color: #F7484E;
+    font-weight: bold;
+  }
+  .main-page .main-der .lista-pasos p {
+    margin: 2rem 0;
+    padding: 0.1rem;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .main-page .main-der .lista-pasos p span {
+    color: #F7484E;
+    font-weight: bold;
+  }
+  .main-page .main-der .titulo-main-2 {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 1rem;
+    margin: 2rem auto;
+  }
+  .main-page .main-der .titulo-main-2 h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .main-page .main-der .titulo-main-2 img {
+    width: 30px;
+    padding: 0.3rem;
+  }
+}
+
 .publiMain .publiSection {
   height: 100vh;
   display: -webkit-box;
