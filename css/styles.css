@@ -1117,7 +1117,7 @@ template {
   font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 335px) {
   .main-page {
     display: block;
     position: static;
@@ -1187,6 +1187,44 @@ template {
   .main-page .main-der .titulo-main-2 img {
     width: 30px;
     padding: 0.3rem;
+  }
+  .mis-trabajos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    position: relative;
+  }
+  .mis-trabajos .main-izq {
+    height: 100vh;
+    padding: 2rem;
+    display: -ms-grid;
+    display: grid;
+    background-color: white;
+    -ms-grid-rows: 80% 20%;
+        grid-template-rows: 80% 20%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .mis-trabajos .main-izq h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    font-weight: 100;
+    font-size: 150px;
+    color: #292929;
+    font-family: "Lato", sans-serif;
+  }
+  .mis-trabajos .main-izq .lista-nav-hero li a {
+    color: #292929;
+  }
+  .mis-trabajos .main-izq .lista-nav-hero li a:hover {
+    color: #F7484E;
+  }
+  .mis-trabajos .main-izq .nav-hero-slash {
+    color: #292929;
   }
 }
 

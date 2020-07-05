@@ -459,7 +459,7 @@
 //     font-family: $font-family;
 // }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 335px) {
     .main-page {
         display: block;
         position: static;
@@ -549,6 +549,35 @@
             }
         }
     }
+
+    .mis-trabajos {
+        @include padre-izq-der();
+        
+        .main-izq{
+            @include main-izq($white);
+      
+    
+            h2 {
+                @include h2($color-texto);
+            }
+    
+            .lista-nav-hero li {      
+                a {
+                color: $color-texto;
+                }
+                
+                & a:hover {
+                color: $color-h1;
+                }
+                
+                
+            }
+            .nav-hero-slash {
+                 color:  $color-texto;
+            }
+    
+        }
+    }  
 
 }
 
