@@ -106,6 +106,7 @@ $font-size-hero: 0.9rem;
 }
 
 //CELUS
+$align: end;
 
 @media only screen and (max-width: 335px) {
     .hero {
@@ -133,13 +134,15 @@ $font-size-hero: 0.9rem;
         }
     }
 
+    
+
     .nav-hero {
-        align-self: end;
+        align-self: $align;
     }
 
     .lista-nav-hero {
         display: block;
-        padding: 0.3rem;
+        padding: 0.5rem;
         height: 100%;
         
         .nav-hero-slash{
@@ -178,7 +181,7 @@ $font-size-hero: 0.9rem;
     }
 
     .nav-hero {
-        align-self: end;
+        align-self: $align;
     }
 
     .lista-nav-hero {

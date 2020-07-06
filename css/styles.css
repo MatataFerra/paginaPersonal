@@ -576,7 +576,7 @@ template {
   }
   .lista-nav-hero {
     display: block;
-    padding: 0.3rem;
+    padding: 0.5rem;
     height: 100%;
   }
   .lista-nav-hero .nav-hero-slash {
@@ -1103,7 +1103,8 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .contacto .contacto-der .parrafo4 img {
@@ -1115,6 +1116,19 @@ template {
   text-decoration: none;
   color: #292929;
   font-size: 1.1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.contacto .contacto-der .parrafo4 a:hover {
+  color: #4a329a;
+}
+
+.contacto .top {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #F7484E;
 }
 
 @media only screen and (max-width: 335px) {
@@ -1128,7 +1142,7 @@ template {
   .main-page .main-izq h2 {
     -ms-flex-item-align: start;
         align-self: flex-start;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 400;
   }
   .main-page .main-der {
@@ -1177,7 +1191,7 @@ template {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 2rem auto;
   }
   .main-page .main-der .titulo-main-2 h2 {
@@ -1189,42 +1203,52 @@ template {
     padding: 0.3rem;
   }
   .mis-trabajos {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    position: relative;
+    display: block;
+    position: static;
+    margin-top: 4rem;
   }
   .mis-trabajos .main-izq {
-    height: 100vh;
-    padding: 2rem;
-    display: -ms-grid;
-    display: grid;
-    background-color: white;
-    -ms-grid-rows: 80% 20%;
-        grid-template-rows: 80% 20%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: static;
   }
   .mis-trabajos .main-izq h2 {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    text-align: center;
-    font-weight: 100;
-    font-size: 150px;
-    color: #292929;
-    font-family: "Lato", sans-serif;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 3.5rem;
+    font-weight: 400;
   }
-  .mis-trabajos .main-izq .lista-nav-hero li a {
-    color: #292929;
+  .mis-trabajos .fotos-main-der .fotos .foto-container {
+    position: static;
+    height: 100%;
   }
-  .mis-trabajos .main-izq .lista-nav-hero li a:hover {
-    color: #F7484E;
+  .mis-trabajos .fotos-main-der .fotos .foto-container .foto-1 {
+    height: 100%;
+    width: 100%;
   }
-  .mis-trabajos .main-izq .nav-hero-slash {
-    color: #292929;
+  .mis-trabajos .fotos-main-der .fotos .foto-container .grid-text {
+    position: static;
+    display: none;
+  }
+  .mis-trabajos .fotos-main-der .fotos .foto-container:hover .foto-1 {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .mis-trabajos .fotos-main-der .fotos .foto-container:hover .grid-text {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .contacto {
+    display: block;
+    position: static;
+    height: 100vh;
+  }
+  .contacto .main-izq {
+    position: static;
+  }
+  .contacto .main-izq h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 3.5rem;
+    font-weight: 400;
   }
 }
 
