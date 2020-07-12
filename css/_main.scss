@@ -368,12 +368,38 @@
             }
         }
 
+        .tecList{
+            margin-bottom: 1.5rem;
+            p {
+                margin-bottom: 0.9rem;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                
+                width: 70%;
+                
+                
+                li{
+                    
+                    list-style: none;
+                    
+
+                    .fab {
+                        
+                        font-size: 4rem;
+                        
+                    }
+                }
+            }
+        }
+
         
         .parrafo3{
             h3{
                 font-weight: 600;
                 font-size: 2rem;
-                margin-bottom: 1rem;
+                //margin-bottom: 1rem;
             }
 
             p:last-of-type {
@@ -393,8 +419,8 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
+            //margin-top: 2rem;
+            //margin-bottom: 1.5rem;
             
             img{
                 height: 50px;
@@ -584,154 +610,11 @@ $h2Query: 3.5rem;
 
         .contacto-der {
             height: 100vh;
+            .tecList{
+                ul{ 
+                    width: 100%;
+                }
+            }
         }
     } 
 }
-
-// @media only screen and (max-width: 580px) {
-//     .main-page {
-//         display: block;
-//         position: static;
-//         //margin-bottom: 3rem;
-
-//         .main-izq {           
-//             position: static;
-//             h2 {
-//                 align-self: flex-start;
-//                 font-size: $h2Query;
-//                 font-weight: 400;
-//             }
-//         }
-
-//         .main-der {
-//             padding: 0;
-//             .textos-main{
-//                 margin: 2rem auto;
-//             }
-//             .textos-main-2 {
-         
-//                 .cursiva {
-//                     font-size: 2rem;
-//                     line-height: 2rem;
-//                     filter: none;
-//                 }
-//             }
-
-//             .lista-pasos {
-//                 width: 100%;
-
-//                 .lista-elementos-1,
-//                 .lista-elementos-3 {
-//                     background-color: hsla(192, 52%, 37%, 0.123);
-                    
-//                 }
-
-//                 .lista-elementos-2,
-//                 .lista-elementos-4 {
-//                     background-color: hsl(0, 0%, 87%);
-//                 }
-
-//                 & > div {
-//                     padding: 1rem;
-//                     font-size: 1.1rem;
-    
-//                     & > span {
-//                         font-size: 1.8rem;
-//                         color: $color-h1;
-//                         font-weight: bold;
-//                     }
-//                 }
-    
-//                 p {
-//                     margin: 2rem 0;
-//                     padding: 0.1rem;
-//                     font-size: 1.6rem;
-//                     text-align: center;
-    
-//                     span {
-//                         color: $color-h1;
-//                         font-weight: bold;
-//                     }
-//                 }
-//             }
-
-//             .titulo-main-2 { 
-//                 justify-content: space-evenly; 
-//                 font-size: 0.8rem;              
-//                 margin: 2rem auto;
-                
-//                 h2 {
-//                     text-align: center;
-//                     font-size: 2rem;
-//                 }
-    
-//                 img {
-//                     width: 30px;
-//                     padding: 0.3rem;
-//                 }
-//             }
-//         }
-//     }
-
-//     .mis-trabajos {
-//         display: block;
-//         position: static;
-//         //height: 100vh;
-//         margin-top: 4rem;
-        
-//         .main-izq{  
-//             position: static;
-//             h2 {
-//                 align-self: flex-start;
-//                 font-size: $h2Query;
-//                 font-weight: 400;
-//             }
-//         }
-
-//         .fotos-main-der {
-//             .fotos{
-//                 //display: grid;
-//                  //grid-template-columns: 1fr;
-//                 .foto-container {
-//                     position: static;
-//                     height: 100%;               
-//                     .foto-1 {
-//                         height: 100%;
-//                         width: 100%;
-//                         //transition: all ease-in-out;
-//                     }
-//                     .grid-text {   
-//                         position: static;
-//                         display: none;
-//                     }
-//                 }
-
-//                 .foto-container:hover .foto-1{
-//                     animation: none;
-//                 }
-    
-//                 .foto-container:hover .grid-text {
-//                     animation: none;
-                    
-//                 }
-//             }
-//         }
-//     }
-    
-//     .contacto {
-//         display: block;
-//         position: static;
-//         height: 100vh;
-        
-//         .main-izq{
-//             //display: block;
-//             position: static;
-    
-//             h2 {
-//                 align-self: flex-start;
-//                 font-size: $h2Query;
-//                 font-weight: 400;
-//             }
-//         }
-//     } 
-// }

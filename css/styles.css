@@ -1106,10 +1106,33 @@ template {
   font-size: 1.1rem;
 }
 
+.contacto .contacto-der .tecList {
+  margin-bottom: 1.5rem;
+}
+
+.contacto .contacto-der .tecList p {
+  margin-bottom: 0.9rem;
+}
+
+.contacto .contacto-der .tecList ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 70%;
+}
+
+.contacto .contacto-der .tecList ul li {
+  list-style: none;
+}
+
+.contacto .contacto-der .tecList ul li .fab {
+  font-size: 4rem;
+}
+
 .contacto .contacto-der .parrafo3 h3 {
   font-weight: 600;
   font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 .contacto .contacto-der .parrafo3 p:last-of-type {
@@ -1134,8 +1157,6 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 .contacto .contacto-der .parrafo4 img {
@@ -1282,6 +1303,9 @@ template {
   }
   .contacto .contacto-der {
     height: 100vh;
+  }
+  .contacto .contacto-der .tecList ul {
+    width: 100%;
   }
 }
 
