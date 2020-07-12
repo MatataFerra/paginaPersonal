@@ -74,104 +74,30 @@ $font-size-hero: 0.9rem;
 
 /*MEDIA QUERYS*/
 
-//TABLETS
 
-@media only screen and (max-width: 1024px) {
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h1{
-            font-size: 1.5rem;
-            padding: 0;
-        }
-        .img-hero {
-            display: flex;
-            justify-content: center;
-            
-            img {
-                
-                height: 300px;
-            }
-        }
-    }
-
-    .lista-nav-hero {
-        li{
-            a{
-                font-size: 1.2rem;
-            }
-        }
-    }
-}
 
 //CELUS
 $align: end;
 
-@media only screen and (max-width: 335px) {
+
+@media only screen and (max-width: 812px) {
     .hero {
-        //width: 100%;
-        height: 100vh;
-        display: grid;
-        //grid-template-rows: 50% 50%;
         
-        margin: 0 auto;
-        h1{
-            font-size: 3rem;
-            display: block;
-            padding: 0;
-            
-        }
-        .img-hero {
-            // display: flex;
-            // justify-content: center;
-            display: none;
-            
-            img {
-                
-                display: none;
-            }
-        }
-    }
-
-    
-
-    .nav-hero {
-        align-self: $align;
-    }
-
-    .lista-nav-hero {
-        display: block;
-        padding: 0.5rem;
-        height: 100%;
-        
-        .nav-hero-slash{
-            display: none;
-        }
-
-    }
-}
-
-@media only screen and (max-width: 420px) {
- 
-    .hero {
-        //width: 100%;
         height: 100vh;
         display: grid;
         
-        //padding: 0;
-        //margin: 0 auto;
+        
+        
         h1{
             font-size: 1.5rem;
             display: block;
             padding: 0;
-            //width: 100%;
+          
             
         }
         .img-hero {
-            // display: flex;
-            // justify-content: center;
-            display: none;
+           
+            display: block;
             
             img {
                 
@@ -199,22 +125,9 @@ $align: end;
 
 @media only screen and (max-width: 580px) {
     .hero {
-        //width: 100%;
-        height: 100vh;
-        display: grid;
-        
-        //padding: 0;
-        //margin: 0 auto;
-        h1{
-            font-size: 1.5rem;
-            display: block;
-            padding: 0;
-            //width: 100%;
-            
-        }
+       
         .img-hero {
-            // display: flex;
-            // justify-content: center;
+            
             display: none;
             
             img {
@@ -238,5 +151,36 @@ $align: end;
             display: none;
         }
 
+    }
+}
+
+//TABLETS
+
+@media only screen and (max-width: 1024px) {
+    .hero {
+        // display: flex;
+        // flex-direction: column;
+        
+        h1{
+            font-size: 1.5rem;
+            padding: 0;
+        }
+        .img-hero {
+            display: flex;
+            justify-content: center;
+            
+            img {
+                
+                height: 300px;
+            }
+        }
+    }
+
+    .lista-nav-hero {
+        li{
+            a{
+                font-size: 1.2rem;
+            }
+        }
     }
 }

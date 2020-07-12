@@ -318,9 +318,6 @@
 
 }
 
-
-
-
 // CONTACTO
 
 .contacto {
@@ -460,7 +457,7 @@
 //tamaño h2
 $h2Query: 3.5rem;
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 812px) {
     .main-page {
         display: block;
         position: static;
@@ -611,10 +608,23 @@ $h2Query: 3.5rem;
         .contacto-der {
             height: 100vh;
             .tecList{
+                margin: 0 auto;
                 ul{ 
+                    margin: 2rem auto;
                     width: 100%;
                 }
             }
         }
     } 
 }
+
+@media only screen and (max-width: 580px) {
+            .contacto-der {
+            height: 100vh;
+            .tecList{
+                ul{ 
+                    width: 100%;
+                }
+            }
+        }
+} 
