@@ -585,7 +585,7 @@ template {
     display: grid;
   }
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: block;
     padding: 0;
     -ms-flex-item-align: end;
@@ -694,6 +694,10 @@ template {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-page {
   display: -ms-grid;
   display: grid;
@@ -773,6 +777,17 @@ template {
 
 .main-page .main-der .textos-main .articulo p {
   margin-bottom: 0.5rem;
+}
+
+.main-page .main-der .textos-main .articulo #linkedin {
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: #2d7c8f;
+}
+
+.main-page .main-der .textos-main .articulo #linkedin:hover {
+  color: #4a329a;
 }
 
 .main-page .main-der .next-page-main-2 {

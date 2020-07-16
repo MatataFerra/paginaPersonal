@@ -31,6 +31,10 @@
     font-family: $font-family;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .main-page {
     @include padre-izq-der();
 
@@ -91,6 +95,16 @@
 
                 p {
                     margin-bottom: 0.5rem;
+                }
+
+                #linkedin {
+                    text-decoration: none;
+                    transition: all .3s ease-in-out;
+                    color: hsl(192, 52%, 37%);
+                }
+
+                #linkedin:hover {
+                    color: hsl(254, 51%, 40%);
                 }
             }
         }
