@@ -781,8 +781,8 @@ html {
 
 .main-page .main-der .textos-main .articulo #linkedin {
   text-decoration: none;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #2d7c8f;
 }
 
@@ -903,7 +903,7 @@ html {
 }
 
 .main-page .main-der .main-dw-page .img-logo svg g {
-  fill: #F7484E;
+  fill: #f7484e;
 }
 
 .mis-trabajos {
@@ -955,52 +955,109 @@ html {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-}
-
-.mis-trabajos .fotos-main-der .fotos .foto-container {
-  position: relative;
   height: 100%;
 }
 
-.mis-trabajos .fotos-main-der .fotos .foto-container .foto-1 {
-  height: 100%;
-  width: 100%;
-  -webkit-transition: all ease-in-out;
-  transition: all ease-in-out;
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 {
+  background-repeat: no-repeat;
+  background-image: url(../assets/CapturaGIFOS.png);
+  background-size: cover;
+  background-position: top left;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.mis-trabajos .fotos-main-der .fotos .foto-container .grid-text {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  visibility: hidden;
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1:hover, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1:hover .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover .grid-text {
+  visibility: visible;
+  opacity: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--2 {
+  background-image: url(../assets/BlueDot.png);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover .grid-text {
+  visibility: visible;
+  opacity: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--3 {
+  background-image: url(../assets/SeleccionVacacionesDGESCA.jpg);
+  background-size: 400%;
+  background-position: -35rem;
+  background-position-y: top;
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover .grid-text {
+  visibility: visible;
+  opacity: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text {
   text-align: center;
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0%;
 }
 
-.mis-trabajos .fotos-main-der .fotos .foto-container .grid-text a {
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a {
   text-decoration: none;
   font-family: "Lato", sans-serif;
-  color: white;
+  color: black;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   /* offset-x | offset-y | blur-radius | color */
-  text-shadow: 3px 3px 10px #292929;
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.897);
   margin: 0 auto;
-}
-
-.mis-trabajos .fotos-main-der .fotos .foto-container:hover .foto-1 {
-  -webkit-animation: growImage 0.7s both;
-          animation: growImage 0.7s both;
-}
-
-.mis-trabajos .fotos-main-der .fotos .foto-container:hover .grid-text {
-  visibility: visible;
-  -webkit-transition: all ease-in-out .7s;
-  transition: all ease-in-out .7s;
-  -webkit-animation: textImage 0.3s both;
-          animation: textImage 0.3s both;
+  width: 90%;
 }
 
 @-webkit-keyframes growImage {
@@ -1009,8 +1066,8 @@ html {
             filter: blur(0px);
   }
   100% {
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
   }
 }
 
@@ -1020,16 +1077,16 @@ html {
             filter: blur(0px);
   }
   100% {
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
   }
 }
 
 @-webkit-keyframes textImage {
   0% {
     opacity: 0%;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   50% {
     opacity: 50%;
@@ -1044,8 +1101,8 @@ html {
 @keyframes textImage {
   0% {
     opacity: 0%;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   50% {
     opacity: 50%;
@@ -1286,10 +1343,6 @@ html {
   .mis-trabajos .fotos-main-der .fotos .foto-container {
     position: static;
     height: 100%;
-  }
-  .mis-trabajos .fotos-main-der .fotos .foto-container .foto-1 {
-    height: 100%;
-    width: 100%;
   }
   .mis-trabajos .fotos-main-der .fotos .foto-container .grid-text {
     position: static;
