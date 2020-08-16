@@ -956,6 +956,7 @@ html {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   height: 100%;
+  gap: 0.5rem;
 }
 
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--1, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 {
@@ -971,70 +972,21 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--1:hover, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover {
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
-}
-
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--1:hover .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover .grid-text {
-  visibility: visible;
-  opacity: 100%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-filter: brightness(1.5);
-          filter: brightness(1.5);
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  padding: 0.5rem;
 }
 
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 {
+  border-top: rgba(45, 124, 143, 0.767) dotted 1px;
   background-image: url(../assets/BlueDot.png);
 }
 
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover {
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
-}
-
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--2:hover .grid-text {
-  visibility: visible;
-  opacity: 100%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-filter: brightness(1.5);
-          filter: brightness(1.5);
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 {
-  background-image: url(../assets/SeleccionVacacionesDGESCA.jpg);
-  background-size: 400%;
-  background-position: -35rem;
-  background-position-y: top;
-}
-
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover {
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
-}
-
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--3:hover .grid-text {
-  visibility: visible;
-  opacity: 100%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-filter: brightness(1.5);
-          filter: brightness(1.5);
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  background-image: url(../assets/SeleccionVacacionesDGESCA.jpg.png);
 }
 
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text {
@@ -1042,22 +994,26 @@ html {
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  opacity: 0%;
+  padding: 1rem;
+  opacity: 50%;
+  -webkit-animation: infinite .7s textImage forwards;
+          animation: infinite .7s textImage forwards;
 }
 
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a {
   text-decoration: none;
   font-family: "Lato", sans-serif;
-  color: black;
+  color: #F7484E;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   /* offset-x | offset-y | blur-radius | color */
-  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.897);
   margin: 0 auto;
   width: 90%;
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a .spanObj {
+  color: #08b7b1;
 }
 
 @-webkit-keyframes growImage {
@@ -1084,33 +1040,31 @@ html {
 
 @-webkit-keyframes textImage {
   0% {
-    opacity: 0%;
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    opacity: 50%;
+  }
+  20% {
+    opacity: 70%;
   }
   50% {
     opacity: 50%;
   }
   100% {
     opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 
 @keyframes textImage {
   0% {
-    opacity: 0%;
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    opacity: 50%;
+  }
+  20% {
+    opacity: 70%;
   }
   50% {
     opacity: 50%;
   }
   100% {
     opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 

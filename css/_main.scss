@@ -226,13 +226,10 @@ html {
         color: $color-texto;
         }
     }
-    $filter: 80%;
+
     @mixin hoverText {
-        visibility: visible;
         opacity: 100%;
-        transform: scale(1);
-        filter: brightness(1.5);
-        filter: invert(1);
+        
     }
 
     .fotos-main-der {
@@ -240,6 +237,7 @@ html {
             display: grid;
             grid-template-columns: 1fr;
             height: 100%;
+            gap: 0.5rem;
         .fotoContainer {
                 &--1 {
                 background-repeat: no-repeat;
@@ -249,42 +247,36 @@ html {
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-end;
                 transition: all 0.5s ease-in-out;
-                &:hover {
-                    filter: grayscale($filter);
-                }
+                padding: 0.5rem;
+                
 
-                &:hover .grid-text {
-                    @include hoverText;
+                // &:hover .grid-text {
+                //     @include hoverText;
                     
-                }
+                // }
             }
 
                 &--2 {
                 @extend .fotoContainer--1;
+                border-top: hsla(192, 52%, 37%, 0.767) dotted 1px;
                 background-image: url(../assets/BlueDot.png);
-                &:hover {
-                    filter: grayscale($filter);
-                }
 
-                &:hover .grid-text {
-                    @include hoverText;
-                }
+
+                // &:hover .grid-text {
+                //     @include hoverText;
+                // }
             }
                 &--3 {
                 @extend .fotoContainer--1;
-                background-image: url(../assets/SeleccionVacacionesDGESCA.jpg);
-                background-size: 400%;
-                background-position: -35rem;
-                background-position-y: top;
-                &:hover {
-                    filter: grayscale($filter);
-                }
+                background-image: url(../assets/SeleccionVacacionesDGESCA.jpg.png);
+                
 
-                &:hover .grid-text {
-                    @include hoverText;
-                }
+
+                // &:hover .grid-text {
+                //     @include hoverText;
+                // }
             }
         }
 
@@ -296,22 +288,28 @@ html {
                     text-align: center;
                     cursor: pointer;
                     transition: all ease-in-out 0.5s;
+                    padding: 1rem;
+                    opacity: 50%;
+                    animation: infinite .7s textImage forwards;
                     
-                    transform: scale(0.7);
-                    opacity: 0%;
 
                     a {
                     text-decoration: none;
                     font-family: $font-family;
                     //color: #db3838;
-                    color: invert($color: #ffffff);
+                    color: $color-h1;
                     text-align: center;
                     font-size: 2rem;
                     font-weight: bold;
                     /* offset-x | offset-y | blur-radius | color */
-                    text-shadow: 3px 3px 5px hsla(0, 0%, 100%, 0.897);
+                    //text-shadow: 3px 3px 5px hsla(0, 0%, 100%, 0.897);
                     margin: 0 auto;
                     width: 90%;
+
+                      .spanObj {
+                        color: invert($color: $color-h1);
+                      }
+
                     }
 
                     
@@ -334,17 +332,20 @@ html {
 
 @keyframes textImage {
   0% {
-    opacity: 0%;
-    transform: scale(0.7);
+    opacity: 50%;
+
   }
 
-  50% {
+  20%{
+    opacity: 70%;
+  }
+
+  50%{
     opacity: 50%;
   }
 
   100% {
     opacity: 100%;
-    transform: scale(1);
   }
 }
 
