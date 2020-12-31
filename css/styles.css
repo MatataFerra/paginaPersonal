@@ -950,57 +950,66 @@ html {
   color: #292929;
 }
 
+.mis-trabajos .fotos-main-der {
+  width: 100%;
+}
+
 .mis-trabajos .fotos-main-der .fotos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  width: 100%;
   height: 100%;
-  gap: 0.5rem;
 }
 
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--1, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 {
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3, .mis-trabajos .fotos-main-der .fotos .fotoContainer--4 {
   background-repeat: no-repeat;
-  background-image: url(../assets/CapturaGIFOS.png);
+  background-image: url(../assets/CapturaGIFOS3.png);
   background-size: cover;
   background-position: top left;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  border: #f7484e 1px solid;
   padding: 0.5rem;
 }
 
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 {
   border-top: rgba(45, 124, 143, 0.767) dotted 1px;
-  background-image: url(../assets/BlueDot.png);
+  background-image: url(../assets/BlueDot3.png);
 }
 
 .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 {
-  background-image: url(../assets/SeleccionVacacionesDGESCA.jpg.png);
+  background-image: url(../assets/code2.png);
+  -webkit-columns: 1 / 3;
+          columns: 1 / 3;
 }
 
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text {
-  text-align: center;
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--4 {
+  background-image: none;
+  background-color: #8b8e91;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--4 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text {
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
+  font-size: 1.5rem;
   padding: 1rem;
-  opacity: 50%;
-  -webkit-animation: infinite .7s textImage forwards;
-          animation: infinite .7s textImage forwards;
 }
 
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a {
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--4 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a {
   text-decoration: none;
   font-family: "Lato", sans-serif;
   color: #F7484E;
@@ -1012,7 +1021,7 @@ html {
   width: 90%;
 }
 
-.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a .spanObj {
+.mis-trabajos .fotos-main-der .fotos .fotoContainer--1 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--4 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--2 .grid-text a .spanObj, .mis-trabajos .fotos-main-der .fotos .fotoContainer--3 .grid-text a .spanObj {
   color: #08b7b1;
 }
 

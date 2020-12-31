@@ -233,22 +233,21 @@ html {
     }
 
     .fotos-main-der {
+      width: 100%;
         .fotos {
-            display: grid;
-            grid-template-columns: 1fr;
-            height: 100%;
-            gap: 0.5rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 100%;
         .fotoContainer {
+
                 &--1 {
                 background-repeat: no-repeat;
-                background-image: url(../assets/CapturaGIFOS.png);
+                background-image: url(../assets/CapturaGIFOS3.png);
                 background-size: cover;
                 background-position: top left;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                transition: all 0.5s ease-in-out;
+                border: #f7484e 1px solid;
+                
                 padding: 0.5rem;
                 
 
@@ -256,28 +255,38 @@ html {
                 //     @include hoverText;
                     
                 // }
-            }
+              }
 
                 &--2 {
                 @extend .fotoContainer--1;
                 border-top: hsla(192, 52%, 37%, 0.767) dotted 1px;
-                background-image: url(../assets/BlueDot.png);
+                background-image: url(../assets/BlueDot3.png);
 
 
                 // &:hover .grid-text {
                 //     @include hoverText;
                 // }
-            }
+              }
                 &--3 {
                 @extend .fotoContainer--1;
-                background-image: url(../assets/SeleccionVacacionesDGESCA.jpg.png);
-                
+                background-image: url(../assets/code2.png);
+                columns: 1 / 3;
 
 
                 // &:hover .grid-text {
                 //     @include hoverText;
                 // }
-            }
+              }
+
+              &--4 {
+                @extend .fotoContainer--1;
+                background-image: none;
+                background-color: #8b8e91;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+              }
         }
 
         .fotoContainer {
@@ -285,12 +294,15 @@ html {
             &--2,
             &--3 {
                 .grid-text {
-                    text-align: center;
+                    //text-align: center;
+                    color: aliceblue;
+                    font-family: $font-family;
                     cursor: pointer;
                     transition: all ease-in-out 0.5s;
+                    font-size: 1.5rem;
                     padding: 1rem;
-                    opacity: 50%;
-                    animation: infinite .7s textImage forwards;
+                    //opacity: 50%;
+                    //animation: infinite .7s textImage forwards;
                     
 
                     a {
@@ -315,6 +327,7 @@ html {
                     
                 }
                 }
+
             }
             }
         }
