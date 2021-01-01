@@ -1,0 +1,25 @@
+.heroSection{
+    @include sizeSection($color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $font-family;
+
+    h1 {
+        font-size: 6rem;
+        margin: 1rem;
+        color: aliceblue;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: $font-family;
+        color: $color-h1;
+        font-size: 2rem;
+
+        &:hover {
+            color: aliceblue;
+        }
+    }
+}

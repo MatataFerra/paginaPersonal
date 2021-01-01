@@ -7,6 +7,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+
+            a {
+                text-decoration: none;
+                font-family: $font-family;
+                color: $color-h1;
+                font-size: 2rem;
+            }
             
             h1{
                 font-family: $font-family;

@@ -1,4 +1,4 @@
-@mixin tamaño-text {
+@mixin sizeText {
   width: 80%;
   font-family: $font-family;
   margin: 0 auto;
@@ -27,6 +27,10 @@
   font-size: 150px;
   color: $colorH2;
   font-family: $font-family;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 html {
@@ -59,11 +63,11 @@ html {
   }
 
   .main-der {
-    @include tamaños(white);
+    @include sizeSection(white);
     height: 100%;
 
     .textos-main {
-      @include tamaño-text;
+      @include sizeText;
 
       h3 {
         font-weight: 900;
@@ -88,6 +92,8 @@ html {
           margin-bottom: 0.5rem;
         }
 
+        
+
         #linkedin {
           text-decoration: none;
           transition: all 0.3s ease-in-out;
@@ -106,10 +112,10 @@ html {
     }
 
     .textos-main-2 {
-      @include tamaño-text;
+      @include sizeText;
       line-height: 25px;
 
-      & > div {
+      &>div {
         margin-bottom: 0.5rem;
       }
 
@@ -149,10 +155,10 @@ html {
       font-family: $font-family;
       margin: 0 auto;
 
-      & > div {
+      &>div {
         padding: 0.1rem;
 
-        & > span {
+        &>span {
           font-size: 1.4rem;
           color: $color-h1;
           font-weight: bold;
@@ -170,7 +176,7 @@ html {
     }
 
     .main-dw-page {
-      @include tamaño-text;
+      @include sizeText;
       margin-top: 3rem;
 
       h2 {
@@ -180,7 +186,7 @@ html {
       .articulo-dw {
         line-height: 25px;
 
-        & > p {
+        &>p {
           margin-bottom: 1rem;
         }
       }
@@ -194,6 +200,7 @@ html {
         svg {
           width: 150px;
           height: 150px;
+
           g {
             fill: #f7484e;
           }
@@ -204,133 +211,161 @@ html {
 }
 
 .mis-trabajos {
-    @include padre-izq-der();
+  @include padre-izq-der();
 
-    .main-izq {
-        @include main-izq($white);
+  .main-izq {
+    @include main-izq($white);
 
-        h2 {
-        @include h2($color-texto);
-        }
+    h2 {
+      @include h2($color-texto);
+    }
 
-        .lista-nav-hero li {
-        a {
-            color: $color-texto;
-        }
-
-        & a:hover {
-            color: $color-h1;
-        }
-        }
-        .nav-hero-slash {
+    .lista-nav-hero li {
+      a {
         color: $color-texto;
-        }
+      }
+
+      & a:hover {
+        color: $color-h1;
+      }
     }
 
-    @mixin hoverText {
-        opacity: 100%;
-        
+    .nav-hero-slash {
+      color: $color-texto;
     }
+  }
 
-    .fotos-main-der {
+  @mixin hoverText {
+    opacity: 100%;
+
+  }
+
+  .fotos-main-der {
+    width: 100%;
+
+    .fotos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       width: 100%;
-        .fotos {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          width: 100%;
-          height: 100%;
-        .fotoContainer {
+      height: 100%;
 
-                &--1 {
-                background-repeat: no-repeat;
-                background-image: url(../assets/CapturaGIFOS3.png);
-                background-size: cover;
-                background-position: top left;
-                border: #f7484e 1px solid;
-                
-                padding: 0.5rem;
-                
+      .fotoContainer {
+        
+        &--1 {
+          background-repeat: no-repeat;
+          background-image: url(../assets/CapturaGIFOS4.png);
+          background-size: cover;
+          background-position: top left;
+          padding: 0.5rem;
+          display: flex;
 
-                // &:hover .grid-text {
-                //     @include hoverText;
-                    
-                // }
-              }
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
 
-                &--2 {
-                @extend .fotoContainer--1;
-                border-top: hsla(192, 52%, 37%, 0.767) dotted 1px;
-                background-image: url(../assets/BlueDot3.png);
+          
+          
 
-
-                // &:hover .grid-text {
-                //     @include hoverText;
-                // }
-              }
-                &--3 {
-                @extend .fotoContainer--1;
-                background-image: url(../assets/code2.png);
-                columns: 1 / 3;
-
-
-                // &:hover .grid-text {
-                //     @include hoverText;
-                // }
-              }
-
-              &--4 {
-                @extend .fotoContainer--1;
-                background-image: none;
-                background-color: #8b8e91;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-              }
         }
 
-        .fotoContainer {
-            &--1, 
-            &--2,
-            &--3 {
-                .grid-text {
-                    //text-align: center;
-                    color: aliceblue;
-                    font-family: $font-family;
-                    cursor: pointer;
-                    transition: all ease-in-out 0.5s;
-                    font-size: 1.5rem;
-                    padding: 1rem;
-                    //opacity: 50%;
-                    //animation: infinite .7s textImage forwards;
-                    
-
-                    a {
-                    text-decoration: none;
-                    font-family: $font-family;
-                    //color: #db3838;
-                    color: $color-h1;
-                    text-align: center;
-                    font-size: 2rem;
-                    font-weight: bold;
-                    /* offset-x | offset-y | blur-radius | color */
-                    //text-shadow: 3px 3px 5px hsla(0, 0%, 100%, 0.897);
-                    margin: 0 auto;
-                    width: 90%;
-
-                      .spanObj {
-                        color: invert($color: $color-h1);
-                      }
-
-                    }
-
-                    
-                }
-                }
-
-            }
-            }
+        &--2 {
+          @extend .fotoContainer--1;
+          background-image: url(../assets/BlueDot3.png);
         }
+
+        &--3 {
+          @extend .fotoContainer--1;
+          background-image: url(../assets/code2.png);
+
+
+        }
+
+        &--4 {
+          @extend .fotoContainer--1;
+          background-image: none;
+          //background-color: #8b8e91;
+        }
+      }
+
+      .fotoContainer {
+
+        &--1,
+        &--2,
+        &--3, &--4 {
+          .grid-text {
+            color: aliceblue;
+            font-family: $font-family;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+            font-size: 1.2rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            .fotoContainerLink {
+              font-family: $font-family;
+              text-decoration: none;
+              color: rgb(255, 255, 255);
+              text-align: center;
+              font-weight: bold;
+              padding: 1rem;
+              font-size: 1.7rem;
+              opacity: 0%;
+              width: 100%;
+              height: 100%;
+              transition: all ease-in-out 0.5s;
+
+            }
+
+
+          }
+
+          
+
+          &:hover .fotoContainerLink{
+            opacity: 100%;
+          }
+
+          .viewMore{
+            @extend .grid-text;
+            color: hsl(194, 9%, 28%);
+            text-decoration: none;
+          }
+
+          .arrowIcon {
+            color: hsl(194, 9%, 28%);
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+            font-size: 1.7rem;
+          }
+        }
+
+        &--1:hover {
+          background-image: linear-gradient(127deg, #e66465, #91dfe5);
+          
+        }
+
+        &--2:hover {
+          background-image: linear-gradient(168deg, #64e6b0, #d6e591);
+          
+        }
+
+        &--3:hover {
+          background-image: linear-gradient(110deg, #9264e6, #e5be91);
+          
+        }
+
+        &--4:hover {
+          background-image: linear-gradient(212deg, #64e2e6, #f34848);
+          
+        }
+
+      }
+    }
+  }
 }
 
 @keyframes growImage {
@@ -345,17 +380,20 @@ html {
 
 @keyframes textImage {
   0% {
-    opacity: 50%;
+    opacity: 0%;
+
 
   }
 
-  20%{
-    opacity: 70%;
-  }
+  // 80% {
+  //   //opacity: 50%;
+  //   text-decoration:overline;
+  // }
 
-  50%{
-    opacity: 50%;
-  }
+  // 90% {
+  //   //opacity: 75%;
+  //   text-decoration:line-through;
+  // }
 
   100% {
     opacity: 100%;
@@ -384,6 +422,7 @@ html {
         color: $white;
       }
     }
+
     .nav-hero-slash {
       color: $color-h1;
     }
@@ -395,7 +434,7 @@ html {
     //height: 100%;
     padding: 2rem;
 
-    & > div {
+    &>div {
       margin-bottom: 3rem;
       font-family: $font-family;
 
@@ -406,9 +445,11 @@ html {
 
     .tecList {
       margin-bottom: 1.5rem;
+
       p {
         margin-bottom: 0.9rem;
       }
+
       ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -491,6 +532,7 @@ $h2Query: 3.5rem;
 
     .main-izq {
       position: static;
+
       h2 {
         align-self: flex-start;
         font-size: $h2Query;
@@ -500,9 +542,11 @@ $h2Query: 3.5rem;
 
     .main-der {
       padding: 0;
+
       .textos-main {
         margin: 2rem auto;
       }
+
       .textos-main-2 {
         .cursiva {
           font-size: 2rem;
@@ -524,11 +568,11 @@ $h2Query: 3.5rem;
           background-color: transparent;
         }
 
-        & > div {
+        &>div {
           padding: 1rem;
           font-size: 1.1rem;
 
-          & > span {
+          &>span {
             font-size: 1.8rem;
             color: $color-h1;
             font-weight: bold;
@@ -574,6 +618,7 @@ $h2Query: 3.5rem;
 
     .main-izq {
       position: static;
+
       h2 {
         align-self: flex-start;
         font-size: $h2Query;
@@ -622,8 +667,10 @@ $h2Query: 3.5rem;
 
     .contacto-der {
       height: 100vh;
+
       .tecList {
         margin: 0 auto;
+
         ul {
           margin: 2rem auto;
           width: 100%;
@@ -637,8 +684,10 @@ $h2Query: 3.5rem;
   .main-page {
     display: block;
     position: static;
+
     .main-izq {
       position: static;
+
       h2 {
         align-self: flex-start;
         font-size: $h2Query;
@@ -648,9 +697,11 @@ $h2Query: 3.5rem;
 
     .main-der {
       padding: 0;
+
       .textos-main {
         margin: 2rem auto;
       }
+
       .textos-main-2 {
         .cursiva {
           font-size: 2rem;
@@ -672,11 +723,11 @@ $h2Query: 3.5rem;
           background-color: hsl(0, 0%, 87%);
         }
 
-        & > div {
+        &>div {
           padding: 1rem;
           font-size: 1.1rem;
 
-          & > span {
+          &>span {
             font-size: 1.8rem;
             color: $color-h1;
             font-weight: bold;
@@ -722,6 +773,7 @@ $h2Query: 3.5rem;
 
     .main-izq {
       position: static;
+
       h2 {
         align-self: flex-start;
         font-size: $h2Query;
@@ -731,16 +783,19 @@ $h2Query: 3.5rem;
 
     .fotos-main-der {
       .fotos {
+
         //display: grid;
         //grid-template-columns: 1fr;
         .foto-container {
           position: static;
           height: 100%;
+
           .foto-1 {
             height: 100%;
             width: 100%;
             //transition: all ease-in-out;
           }
+
           .grid-text {
             position: static;
             display: none;
@@ -776,8 +831,10 @@ $h2Query: 3.5rem;
 
     .contacto-der {
       height: 100vh;
+
       .tecList {
         margin: 0 auto;
+
         ul {
           margin: 2rem auto;
           width: 100%;
@@ -795,6 +852,7 @@ $h2Query: 3.5rem;
 
     .main-izq {
       position: static;
+
       h2 {
         align-self: flex-start;
         font-size: $h2Query;
@@ -804,9 +862,11 @@ $h2Query: 3.5rem;
 
     .main-der {
       padding: 0;
+
       .textos-main {
         margin: 2rem auto;
       }
+
       .textos-main-2 {
         .cursiva {
           font-size: 2rem;
@@ -828,11 +888,11 @@ $h2Query: 3.5rem;
           background-color: hsl(0, 0%, 87%);
         }
 
-        & > div {
+        &>div {
           padding: 1rem;
           font-size: 1.1rem;
 
-          & > span {
+          &>span {
             font-size: 1.8rem;
             color: $color-h1;
             font-weight: bold;
@@ -878,6 +938,7 @@ $h2Query: 3.5rem;
 
     .main-izq {
       position: static;
+
       h2 {
         align-self: flex-start;
         font-size: $h2Query;
@@ -887,16 +948,19 @@ $h2Query: 3.5rem;
 
     .fotos-main-der {
       .fotos {
+
         //display: grid;
         //grid-template-columns: 1fr;
         .foto-container {
           position: static;
           height: 100%;
+
           .foto-1 {
             height: 100%;
             width: 100%;
             //transition: all ease-in-out;
           }
+
           .grid-text {
             position: static;
             display: none;
@@ -932,8 +996,10 @@ $h2Query: 3.5rem;
 
     .contacto-der {
       height: 100vh;
+
       .tecList {
         margin: 0 auto;
+
         ul {
           margin: 2rem auto;
           width: 100%;

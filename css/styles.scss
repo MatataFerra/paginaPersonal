@@ -29,7 +29,7 @@ $white: white;
     font-size: 38px;
 }
 
-@mixin tamaños($color-fondo-section) {
+@mixin sizeSection($color-fondo-section) {
     height: 100vh;
     padding: 2rem;
     background-color: $color-fondo-section;
@@ -41,4 +41,5 @@ $white: white;
 @import "animations";
 @import "main";
 @import"publicaciones";
+@import "trabajos";
 

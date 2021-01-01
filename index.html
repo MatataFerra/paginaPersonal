@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>MGF | HR Solutions</title>
   </head>
 
@@ -17,7 +23,7 @@
       <section class="hero">
         <h1>Hr Solutions & IT Selector</h1>
         <div class="img-hero">
-          <img src="./assets/Elipse 1.svg" alt="Foto mía" />
+          <img src="./assets/PerfilMati.png" alt="Foto mía" />
         </div>
         <nav class="nav-hero">
           <ul class="lista-nav-hero">
@@ -61,7 +67,7 @@
                 El arte y las relaciones como pilares de mi trabajo. Ser
                 creativo es mi forma de pensar el mundo. Leo, escribo, diseño,
                 administro y siempre estoy con proyectos. Mi arte es transformar
-                y mi pasión es el cambio <strike>Human Resources</strike>.
+                y mi pasión es el cambio.
               </p>
             </div>
             <div>
@@ -71,8 +77,8 @@
               <article class="articulo">
                 <p>
                   Después de trabajar años en distintos lugares y en proyectos
-                  personales, llegué a una simple conclusión: lo que importa es
-                  el camino y aprender de eso.
+                  personales, llegué a una simple conclusión: <span class="bold">lo que importa es
+                    el camino y aprender de eso.</span> 
                 </p>
                 <p>
                   Me ocupo de los procesos de HR para una organización con gran
@@ -81,14 +87,10 @@
                 </p>
                 <p>
                   Lo que me llevó a apasionarme fue el contacto con la gente,
-                  poder ayudar al desarrollo sus carreras y a ser mejores
+                  poder ayudar al desarrollo en sus carreras y a ser mejores
                   profesionales.
                 </p>
-                <p>
-                  Proyectar, diseñar y medir cada proceso. Una persona entra y
-                  se define su punto de partida, sus competencias. La
-                  transformación y el camino es lo que me obsesiona.
-                </p>
+                
               </article>
             </div>
           </div>
@@ -104,7 +106,12 @@
               </div>
               <div>
                 En las situación que me ha tocado llevar adelante un proceso de
-                selección efectivo.
+                selección efectivo, me pregunté ¿Qué <span class="bold"> competencias </span>
+                necesita una persona para ocupar este puesto? Aunque, no nos podemos
+                quedar solo ahí, debemos indagar en cómo interactúan esas competencias
+                con el entorno. De nada sirve buscar a alguien con buena comunicación para un
+                departamento donde los espacios de conversación no son muy habituales.
+                
               </div>
               <div class="cursiva">
                 "No contrates a un hombre que hace el trabajo por dinero, sino
@@ -208,40 +215,39 @@
         </section>
         <section class="fotos-main-der">
           <div class="fotos">  
-              <div class="fotoContainer--1" id="fc1">
+              <div class="fotoContainer--1" id="fotoContainerFather--1">
                 <p class="grid-text">
-                  <!-- <a
-                    href="https://matataferra.github.io/GifOs/"
-                    target="_blank">
-                    Proyecto GifOs - HTML, CSS3 y JavaScript - <span class="spanObj"> Objetivo:
-                    integración con API</span></a> -->
+                  <a
+                  class="fotoContainerLink"
+                  id="fotoContainerChild--1"
+                    >
+                    GuiFos: Consumir API</a>
                 </p>
               </div>
             
-            <div class="fotoContainer--2">
+            <div class="fotoContainer--2" id="fotoContainerFather--2">
               <p class="grid-text">
-                <!-- <a
-                  href="https://matataferra.github.io/podcastacamica/"
-                  target="_blank">
-                  Proyecto Blue Dot - HTML y CSS3 - <span class="spanObj">Objetivo: Diseño y
-                  maquetación</span></a> -->
+                <a
+                  class="fotoContainerLink"
+                  id="fotoContainerChild--2"
+                  >
+                  Proyecto Blue Dot HTML y CSS3</a>
               </p>
             </div>
-            <div class="fotoContainer--3">
+            <div class="fotoContainer--3" id="fotoContainerFather--3">
               <p class="grid-text">
-                <!-- <a
-                  href=""
-                  target="_blank"
-                  id="inFoto">
-                  Selección de Personal para el programa Vacaciones en la
-                  Escuela<br>(ir a la publicación de Linkedin)<span class="spanObj"><br>Objetivo: Selección de más de 700 docentes</span></a> -->
+                <a
+                  class="fotoContainerLink"
+                  id="fotoContainerChild--3"
+                  >
+                  Proyecto BackEnd</a>
               </p>
             </div>
-            <div class="fotoContainer--4">
+            <div class="fotoContainer--4" id="fotoContainerFather--4">
               <p class="grid-text">
-                Ver Mas
-                <i class="far fa-arrow-alt-circle-right arrowIcon"></i>
+                <a id="fotoContainerChild--4" class="viewMore">Ver Mas</a>
               </p>
+              <a href="trabajos.html"><i class="far fa-arrow-alt-circle-right arrowIcon"></i></a>
             </div>
           </div>
         </section>
